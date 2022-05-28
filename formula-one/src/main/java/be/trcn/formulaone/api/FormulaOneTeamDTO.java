@@ -1,11 +1,16 @@
 package be.trcn.formulaone.api;
 
+import be.trcn.formulaone.domain.FormulaOneTeam;
+
 public class FormulaOneTeamDTO {
     private String name;
     private int members;
     private String topDriver;
 
-    public FormulaOneTeamDTO() {
+    public FormulaOneTeamDTO(FormulaOneTeam formulaOneTeam) {
+        this.name = formulaOneTeam.getName();
+        this.members = formulaOneTeam.getMembers();
+        this.topDriver = formulaOneTeam.getTopDriver();
     }
 
     public String getName() {
